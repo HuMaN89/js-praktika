@@ -365,7 +365,10 @@ textarea:focus {
 .glazing {
   padding: 8rem 0;
 }
-
+.glazing_slider {
+  display: flex;
+  justify-content: space-evenly;
+}
 .glazing_block {
   display: inline-block;
 }
@@ -496,12 +499,15 @@ textarea:focus {
   padding: 8rem 0;
   background-color: #f7f7f7;
 }
-
+.decoration_slider {
+  display: flex;
+  justify-content: space-evenly;
+}
 .decoration_item {
   text-align: center;
 }
 
-.decoration_item a {
+.decoration_item {
   font-size: 2rem;
   font-weight: 600;
   color: #000000;
@@ -509,11 +515,11 @@ textarea:focus {
   border-bottom: 1px dotted #000000;
 }
 
-.decoration_item a:hover {
+.decoration_item:hover {
   cursor: pointer;
 }
 
-.decoration_item a:focus {
+.decoration_item:focus {
   border: none;
   text-decoration: none;
   color: #0089cd;
@@ -605,7 +611,35 @@ textarea:focus {
 .works a[data-fancybox="gallery"]:hover .lupa {
   opacity: 1;
 }
-
+.alert {
+  position: relative;
+  color: red;
+  background-color: yellow;
+  text-align: center;
+  padding: 0;
+  border:none;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.alert:hover {
+  opacity: 1;
+}
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left:  0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.view {
+  width: 550px;
+  height: 550px;
+  margin: auto;
+}
 /*Guarantees*/
 .guarantees {
   padding: 6rem 0 1rem;
@@ -929,6 +963,7 @@ textarea:focus {
 
 .popup_calc_content .big_img img {
   display: none;
+  margin: auto;
   margin-bottom: 3rem;
   width: 30rem;
 }
@@ -973,6 +1008,12 @@ textarea:focus {
 
 .popup_calc_button {
   padding: 1rem 5rem;
+}
+
+.button[disabled],
+.button:disabled{
+  background: #fff;
+  border: 1px solid #141002;
 }
 
 .popup_calc_profile {
@@ -1149,7 +1190,7 @@ textarea:focus {
     margin-right: 2rem;
   }
 
-  .decoration_item a {
+  .decoration_item a  {
     font-size: 1.8rem;
   }
 
